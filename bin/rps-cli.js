@@ -16,6 +16,16 @@ Examples:
                   e.g. {"player":"rock"}
   node-rps rock   Return JSON with results for RPS played against a simulated opponent.
                   e.g {"player":"rock","opponent":"scissors","result":"win"}`)
+    process.exit()
+}
+
+if (args.r || args.rules) {
+    console.log(`Rules for Rock Paper Scissors:
+
+  - Scissors CUTS Paper
+  - Paper COVERS Rock
+  - Rock CRUSHES Scissors`)
+    process.exit()
 }
 
 console.log(rps("Paper"))
