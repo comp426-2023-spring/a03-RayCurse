@@ -30,6 +30,8 @@ if (args.r || args.rules) {
 
 if (args._.length <= 2) {
     console.log(rps())
+} else if (args._.length > 3) {
+    console.error("ERROR: arguments out of range")
 } else {
     console.log(rps(...args._.slice(2)))
 }
