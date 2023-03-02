@@ -28,4 +28,8 @@ if (args.r || args.rules) {
     process.exit()
 }
 
-console.log(rps("Paper"))
+if (args._.length <= 2) {
+    console.log(rps())
+} else {
+    console.log(rps(...args._.slice(2)))
+}
