@@ -36,9 +36,9 @@ if (args.r || args.rules) {
 }
 
 if (args._.length <= 2) {
-    console.log(rpsls())
+    console.log(JSON.stringify(rpsls(), null, 4))
 } else if (args._.length > 3) {
     console.error("ERROR: arguments out of range")
 } else {
-    console.log(rpsls(...args._.slice(2)))
+    console.log(JSON.stringify(rpsls(...args._.slice(2)), null, 4))
 }
